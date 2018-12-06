@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 114420400382146650}
   - component: {fileID: 114958813855989948}
   - component: {fileID: 60538324845739902}
+  - component: {fileID: 50327799296254666}
+  - component: {fileID: 114698091452617752}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -43,6 +45,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50327799296254666
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265339934085148}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &60538324845739902
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -111,6 +133,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8920dc2e09a94cf428a1b60828d408c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114698091452617752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265339934085148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5d9de470bb94842a93aef5291f403f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!114 &114958813855989948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,6 +157,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 500
+  shotCounter: 0
+  minTimeBetnShots: 0.2
+  maxTimeBetnShots: 3
+  projectile: {fileID: 1321720001523002, guid: 65caffa267fe14a43a849206159e5951, type: 2}
+  projectileSpeed: 15
+  DeathVFX: {fileID: 1988186350345216, guid: 72f23433170444b47a00c8aed54653e7, type: 2}
+  DeathVFXDuration: 1
+  DeathSFX: {fileID: 8300000, guid: 2d9799428d2ef354f95ec0465bc61523, type: 3}
+  DeathSFXVolume: 0.75
+  ShootSFX: {fileID: 8300000, guid: eab562586e9238549b846c42a5182f80, type: 3}
+  ShootSFXVolume: 0.1
 --- !u!212 &212631142208370508
 SpriteRenderer:
   m_ObjectHideFlags: 1
